@@ -1,16 +1,18 @@
 package ru.ibs.internship.backend.nar;
 
 public class Trainee extends Employee {
+
     private String curatorName;
     private boolean internshipPassed;
 
     public Trainee() {
     }
 
-    public Trainee(String name, String surname, boolean internshipPassed) {
+    public Trainee(String name, String surname, boolean internshipPassed, Integer workExperience) {
         this.setName(name);
         this.setSurname(surname);
         this.internshipPassed = internshipPassed;
+        this.setWorkExperience(workExperience);
     }
 
     public Trainee(String name, String surname, Integer workExperience, Double salary, String curatorName, boolean internshipPassed) {
