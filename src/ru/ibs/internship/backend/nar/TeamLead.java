@@ -8,11 +8,12 @@ public class TeamLead extends Employee implements Manager {
     public TeamLead() {
     }
 
-    public TeamLead(String name, String surname, String projectName, Integer numberOfEmployees) {
+    public TeamLead(String name, String surname, String projectName, Integer numberOfEmployees, Integer workExperience) {
         this.setName(name);
         this.setSurname(surname);
         this.numberOfEmployees = numberOfEmployees;
         this.projectName = projectName;
+        this.setWorkExperience(workExperience);
     }
 
     public TeamLead(String name, String surname, Integer workExperience, Double salary, Integer numberOfEmployees, String projectName) {
@@ -26,7 +27,7 @@ public class TeamLead extends Employee implements Manager {
 
     @Override
     public void printInfo() {
-        System.out.printf("%s %s руководит проектом %s, ", this.getSurname(), this.getName(), this.getProjectName());
+        System.out.printf("Teamlead %s %s руководит проектом %s, ", this.getSurname(), this.getName(), this.getProjectName());
         System.out.printf("в его отделе %d человек.%n", this.getNumberOfEmployees());
     }
 
