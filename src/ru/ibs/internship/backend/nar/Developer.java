@@ -1,17 +1,19 @@
 package ru.ibs.internship.backend.nar;
 
 public class Developer extends Employee {
+
     private Integer numberOfProjects;
     private boolean haveAnIntern;
 
     public Developer() {
     }
 
-    public Developer(String name, String surname, Integer numberOfProjects, boolean haveAnIntern) {
+    public Developer(String name, String surname, Integer numberOfProjects, boolean haveAnIntern, Integer workExperience) {
         this.setName(name);
         this.setSurname(surname);
         this.numberOfProjects = numberOfProjects;
         this.haveAnIntern = haveAnIntern;
+        this.setWorkExperience(workExperience);
     }
 
     public Developer(String name, String surname, Integer workExperience, Double salary, Integer numberOfProjects, boolean haveAnIntern) {
@@ -27,9 +29,9 @@ public class Developer extends Employee {
     public void printInfo() {
         System.out.printf("Разработчик %s %s участвует в %d проектах, ", this.getSurname(), this.getName(), this.getNumberOfProjects());
         if (this.haveAnIntern) {
-            System.out.println("у него есть закреплённый за ним стажёр.");
+            System.out.println("за разработчиком закреплён стажёр.");
         } else {
-            System.out.println("у него нет закреплённого за ним стажёра.");
+            System.out.println("за разработчиком не закреплён стажёр.");
         }
     }
 
